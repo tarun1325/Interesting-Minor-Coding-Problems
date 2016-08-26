@@ -20,6 +20,7 @@ struct node						// Node Structure
 	struct node *next;
 } ;
 
+// Stack to Push the State of towers
 struct Stack
 {
 	struct node **src[ MAX_SIZE];
@@ -34,7 +35,7 @@ struct Stack stk;
 void print_Towers( struct node *A, struct node *B, struct node *C);
 
 // Global Variables
-struct node *tower0, *tower1, *tower2;
+struct node *tower0, *tower1, *tower2;		// Pointers to Towers
 
 
 
@@ -80,12 +81,18 @@ void tower_of_hanoi( int numOfDisc, struct node** src, struct node **des, struct
 	struct node **temp = NULL;
 	struct node *temp1 = NULL;
 	struct node *temp2 = NULL;
+	
+	// Iterative Inorder Traversal Concept Used
 	while( numOfDisc > 0  ||  stk.top > -1)
 	{
+		// If Number of Disc more than 0
 		if( numOfDisc > 0)
 		{
+			// Push Current state on to Stack
 			push( numOfDisc, src, des, aux);
-			// Left Subtree
+			// Go to Left Subtree
+			// For Tower of Hanoi - Left Child has exchanged destination and auxillary
+			// Swap them
 			temp = aux;
 			aux = des;
 			des = temp;
@@ -93,11 +100,13 @@ void tower_of_hanoi( int numOfDisc, struct node** src, struct node **des, struct
 			numOfDisc--;
 
 		}
+		// If Number of States readched 0
 		else
 		{
+			// Pop Out last state of Towers
 			pop( &numOfDisc, &src, &des, &aux);	
-	
-			// Source to Destination Transition
+			
+			// Getting Names of Source and Destination Towers
 			if( *src == tower0)
 				ch1 = 'A';
 			else if( *src == tower1)
@@ -112,6 +121,7 @@ void tower_of_hanoi( int numOfDisc, struct node** src, struct node **des, struct
 			else if( *des == tower2)
 				ch2 = 'C';
 				
+			// Source to Destination Transition - Movement of Disc
 			printf("\n----------------------------------- \n");
 			printf("Moving Disc from %c to %c \n", ch1, ch2);
 		
@@ -123,9 +133,12 @@ void tower_of_hanoi( int numOfDisc, struct node** src, struct node **des, struct
 			temp1 = NULL;
 			temp2 = NULL;
 
+			// Print New State of Trees after Movement
 			print_Towers(tower0, tower1, tower2);
 
 			// Right Subtree
+			// Right Side of Tower of Hanoi has Source and Auxillary Exchanged
+			// Swap them
 			numOfDisc--;
 			temp = src;
 			src = aux;
