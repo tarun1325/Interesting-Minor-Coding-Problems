@@ -1,10 +1,16 @@
 /*
 	Author		:		Tarun Jain
-	Roll No.		:		MT2015120
+	Roll No.	:		MT2015120
 	College		: 		IIITB
 	Email		:		Tarun.Jain@iiitb.org
-	Program 	:		Dijkstra's Single Source Shortest Path ( For Each Node ) - Min Heap Used
-	Assumption	:		None
+	Program 	:		Read Graph Data Provided at Run Time - { Structured Code, Modular }
+					2D array Created - In Heap Memory { Good to understand Pointers Throughly } 
+	Assumption	:		If input file is provided then, Format of the Input file:
+						No. of Vertices - nNodes
+						No. of Edges	- nEdges
+						0 -> Undirected Graph; 1 -> Directed Graph
+						{ Edge List with Weights of corresponding edges } - nEdges lines
+						Source Vertex
 */
 
 // Header Files
@@ -31,7 +37,6 @@ int main()
 	// Printing Graph Data
 	printf("\n\nInputted Graph is : \n");
 	printGraph( nNodes, &graph_data);
-	
 	free(graph_data);
 	return 0;
 }
@@ -123,16 +128,16 @@ void printGraph( int nNodes, int ***graph_data1)
 {
 	// Variable
 	int **graph_data = *graph_data1;			// Pointer to 2D data
-	int i, j;									// Loop Variables
+	int i, j;						// Loop Variables
 
-	printf("\n\t\tColumns\t\t\n\n");
+	printf("\n\t\tColumns\t\t\n\n");			// Printing Formatting
 	printf("     \t");
 	for( i = 0; i < nNodes; i++)
 	{
 		printf("%d\t", i+1);		
 	}
 	printf("\n");
-	for( i = 0; i < nNodes; i++)
+	for( i = 0; i < nNodes; i++)				// Actual Data Printing
 	{
 		printf("\nRow %d :", i+1);
 		for( j = 0; j < nNodes; j++)
