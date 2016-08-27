@@ -1,3 +1,8 @@
+/*
+	I have modified online available code to find all combinations.
+	Program : If given 'n' and 'r', Find all the nPr and print those combination
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 
