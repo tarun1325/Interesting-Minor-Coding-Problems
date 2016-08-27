@@ -1,7 +1,7 @@
 /*
 	Author	:	Tarun Jain
 	Roll No	:	MT2015120
-	Program	:	Recursive Permutation
+	Program	:	Recursive Program to find all Permutation if 'n' numbers and 'r' places is given.
 	Date 	:	10-Aug-2016
 */
 
