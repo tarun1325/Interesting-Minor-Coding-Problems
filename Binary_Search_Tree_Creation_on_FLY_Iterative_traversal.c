@@ -3,7 +3,7 @@
 	Roll No.:	MT2015120
 	College	: 	IIITB
 	Email	:	Tarun.Jain@iiitb.org
-	Program	:	Binary Search tree Creation and Iterative Preorder, PostOrder and InOrder Traversal
+	Program	:	Binary Search tree Creation at Run time input and Iterative Preorder, PostOrder and InOrder Traversal
 	Date	: 	25- Aug-2016
 	Assumption :	Maximum Number of Nodes allowed is 100 - MAX_SIZE
 */
