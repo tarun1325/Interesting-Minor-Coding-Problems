@@ -1,7 +1,9 @@
 /*
-	Author 		:	 Tarun Jain
+	Author 		:	Tarun Jain
 	Roll Number	:	MT2015120
-	File			: 	Tower_of_Hanoi_Iterative.c
+	File		: 	Tower_of_Hanoi_Iterative.c
+	College		: 	IIITB
+	Email		:	Tarun.Jain@iiitb.org
 	Program		:	Tower Of Hanoi Implementation with Iterative Appoarch
 	Date 		:	26-Aug-2016
 	Assumption	:	Works for 100 Discs i.e. MAX_SIZE
