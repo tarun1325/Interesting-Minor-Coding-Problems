@@ -180,12 +180,3 @@ struct node* elimination( struct node *track, int k, struct node **head)
 	return track;
 	
 }
-
-
-
-
-
-
-
-
-
