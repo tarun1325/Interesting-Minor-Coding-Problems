@@ -1,4 +1,4 @@
-# Random-Small-Coding-Problems
+# Interesting-Minor-Coding-Problems
 
 This Folder contains Programs which I make during my fun time.
 The Statement of each question is Written in the Comments Section at begining of each file.
