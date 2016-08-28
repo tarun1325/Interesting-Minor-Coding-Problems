@@ -1,3 +1,8 @@
+Works well without input file also.
+
+But if input file is provided then it should follow the given format.
+
+NOTE : Infinite Distance is Taken as 1000000 
 
 Format of the Input file:
 No. of Vertices
