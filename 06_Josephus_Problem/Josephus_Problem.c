@@ -61,6 +61,11 @@ int main()
 		scanf("%d", &k);
 		
 		// Run Josephus Problem Function
+		if( k == 0)
+		{
+			printf("\nInvalid Entry\n");
+			exit(0);
+		}
 		result = solveJosephus(n, k);
 		if( result == 0)
 			printf("\nNo Person Left. All Killed !!!\n");
