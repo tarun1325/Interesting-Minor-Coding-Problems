@@ -17,7 +17,7 @@ int main()
 	// Variables
 	int matrix[MAX_SIZE][MAX_SIZE], no_row, no_col;
 	int i, j;
-	int dir = 1, temp = 1;										// 1 - right :: 2 - bottom :: 3 - left :: 4 - up
+	int dir = 1;										// 1 - right :: 2 - bottom :: 3 - left :: 4 - up
 
 	// Read Number of row and column
 	scanf( "%d%d", &no_row, &no_col);
@@ -45,16 +45,15 @@ int main()
 			matrix[i][j] = 0;							// Set that Element as Zero - Also it will avoid infinite looping
 			switch( dir )
 			{
-				case 1:	temp = 2;						// Right Direction Changed to Down Direction
+				case 1:	dir = 2;						// Right Direction Changed to Down Direction
 						break;
-				case 2:	temp = 3;						// Down Direction Changed to Left Direction
+				case 2:	dir = 3;						// Down Direction Changed to Left Direction
 						break;
-				case 3:	temp = 4 ;						// Left Direction Changed to Up Direction
+				case 3:	dir = 4 ;						// Left Direction Changed to Up Direction
 						break;
-				case 4:	temp = 1;						// Up Direction Changed to Left Direction
+				case 4:	dir = 1;						// Up Direction Changed to Left Direction
 						break;
 			}
-			dir = temp;
 		}
 		// Moving in the Direction
 		switch( dir )
