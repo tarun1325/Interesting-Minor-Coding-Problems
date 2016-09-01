@@ -1,0 +1,29 @@
+Program		:		write a program , given a matrix with 0’s and 1’s , you enter the matrix at (0,0) in left to right direction , whenever you 						encounter a 0 you retain in same direction , if you encounter a 1’s you have to change direction to right of current direction 					and change that 1 value to 0, you have to find out from which index you will leave the matrix at the end.
+Example		:		Input
+					6 8
+					0 0 0 0 1 1 0 1
+					0 0 0 1 0 0 1 0
+					0 0 1 1 0 0 1 0
+					0 0 1 1 1 0 0 0
+					0 0 0 1 0 0 0 0
+					0 0 1 1 0 0 0 0
+
+					Output
+					row : 6, col : 7
+
+Awesome Mistake	:
+Find out what is the Value of 'dir' after execution of this code snippet ?
+
+int dir = 1;
+switch( dir )
+{
+	case 1:	dir = 2;						
+			break;
+	case 2:	dir = 3;						
+			break;
+	case 3:	dir = 4 ;						
+			break;
+	case 4:	dir = 1;						
+			break;
+}
+
