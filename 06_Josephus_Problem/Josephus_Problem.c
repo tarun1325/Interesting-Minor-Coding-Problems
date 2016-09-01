@@ -118,7 +118,6 @@ int solveJosephus( int n, int k)
 	printf("\nInitial State of People : ");
 	display( head);
 	
-	
 	// Elimination Begins Here
 	track = head;
 	while( count > 1)
@@ -152,7 +151,7 @@ void display( struct node *head)
 // Kill Function
 struct node* elimination( struct node *track, int k, struct node **head)
 {
-	struct node *temp = track;
+	struct node *temp;
 	// Skip K-1 Persons
 	while( k-1 != 0)
 	{
@@ -168,8 +167,13 @@ struct node* elimination( struct node *track, int k, struct node **head)
 
 	// Updating Head if Head is being Deleted
 	if( track == *head)
+	{
 		*head = track -> next;
 		
+	}	
+
+	// Pointer for Freeing Memory Purpose
+	temp = track;
 	// Update New Head For Next Iteration
 	track = track -> next;
 	
