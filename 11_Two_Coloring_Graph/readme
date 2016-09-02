@@ -1,0 +1,25 @@
+Program		:		Two Coloring - Color Each Node of the Graph with either White or Black such that adjacent Should not be same Color
+					If Can not color then show -1 as output
+
+Input Format :		No. of Test Case
+					< 2 Lines for Each Test Cases>
+						- No.of Vertex	No. of Edges
+						- List of All Edges containing pair ( source destination)
+
+Output Format	:	#Test_Case_Number	<No_of_White_Nodes>	<List_of_All_White_Nodes>
+
+Example:
+Input:
+
+3
+7 6
+1 2 1 3 2 4 3 5 3 6 5 7
+6 6
+1 2 1 3 2 4 3 4 4 5 4 6
+7 7
+1 2 1 3 2 4 3 5 4 5 5 6 5 7
+
+Output:
+#1 4 1 4 5 6
+#2 2 1 4
+#3 -1
