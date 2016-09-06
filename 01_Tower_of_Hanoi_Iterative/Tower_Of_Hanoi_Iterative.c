@@ -6,7 +6,7 @@
 	Email		:	Tarun.Jain@iiitb.org
 	Program		:	Tower Of Hanoi Implementation with Iterative Appoarch
 	Date 		:	26-Aug-2016
-	Assumption	:	Works for 100 Discs i.e. MAX_SIZE
+	Assumption	:	Works for 2^100 Discs i.e. MAX_SIZE
 */
 
 // Include Files
@@ -168,7 +168,7 @@ int main()
 	// Read Input
 	printf("\nEnter No. of Disc : ");
 	scanf("%d", &numOfDisc);
-	while( numOfDisc > MAX_SIZE)
+	while( numOfDisc > pow(2,MAX_SIZE))
 	{
 		printf("\nNumber of Discs exceeded!!! \n\nEnter No. of Disc under %d : ",  MAX_SIZE);
 		scanf("%d", &numOfDisc);
