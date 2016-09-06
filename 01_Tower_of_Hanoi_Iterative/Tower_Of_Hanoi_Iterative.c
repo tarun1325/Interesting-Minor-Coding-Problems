@@ -170,7 +170,7 @@ int main()
 	scanf("%d", &numOfDisc);
 	while( numOfDisc > pow(2,MAX_SIZE))
 	{
-		printf("\nNumber of Discs exceeded!!! \n\nEnter No. of Disc under %d : ",  MAX_SIZE);
+		printf("\nNumber of Discs exceeded!!! \n\nEnter No. of Disc under %d : ",  pow(2,MAX_SIZE));
 		scanf("%d", &numOfDisc);
 	}
 	printf("\nSteps For Constructing Tower of Hanoi for %d Discs...\n\n", numOfDisc);
